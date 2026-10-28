@@ -12,6 +12,10 @@
 How do you measure the area of a building whose outline is curves, not rectangles?
 This project estimates the area of an irregular floor plan with **Monte Carlo simulation** — and, more importantly, asks what happens when the simulation itself becomes too slow. Starting from the classic "estimate π by throwing random points" experiment, a plain Python loop hits a wall at ~10 million samples. The project then benchmarks three implementations and shows that **NumPy vectorization runs ~100× faster than the serial loop** at million-sample scale, with estimation error following the theoretical 1/√N convergence law.
 
+## Project history
+
+This work was first entered in the **37th Nantong Municipal Youth Science & Technology Innovation Competition**, where it won **Second Prize**. The version in this repository is the revised and optimized provincial entry, which went on to win **Second Prize in the Junior High Division at the 37th Jiangsu Provincial Youth Science & Technology Innovation Competition** (June 2026).
+
 ## What it does
 
 1. **Models the building.** 29 feature points are extracted by hand from a floor-plan drawing; straight segments and four cubic Bézier curves (`matplotlib.path.Path` with `CURVE4` codes) form the closed domain in `fp.py`. Coordinates are normalized to the unit square, and point-in-domain tests use `Path.contains_points`.
