@@ -3,7 +3,7 @@
 **突破算力瓶颈：基于向量化与多进程并行的不规则建筑面积模拟优化研究**
 
 > 🏆 **Second Prize (Junior High Division), 37th Jiangsu Provincial Youth Science & Technology Innovation Competition, June 2026**
-> 第三十七届江苏省青少年科技创新大赛 青少年科技创新成果 初中组二等奖（证书编号 JSCA20264050221453）
+> 第三十七届江苏省青少年科技创新大赛 青少年科技创新成果 初中组二等奖
 
 ![Floor plan domain](results/floorplan_preview.png)
 
@@ -33,7 +33,7 @@ This work was first entered in the **37th Nantong Municipal Youth Science & Tech
 - Estimation error shrinks with sample size following **1/√N**, as theory predicts.
 - Multiprocessing helps the loop version but cannot beat vectorization — process startup and IPC overhead dominate at this scale.
 
-Full data tables, charts and the debugging log (a dimension-alignment bug `(2,N)` vs `(N,2)`, and a multiprocessing argument-passing fix) are in the [research paper](paper/research_paper.pdf).
+Full data tables, charts and the debugging log (a dimension-alignment bug `(2,N)` vs `(N,2)`, and a multiprocessing argument-passing fix) are in the full research paper (kept offline for privacy; available on request).
 
 ## Run it
 
@@ -51,7 +51,7 @@ Requires Python 3.12+, NumPy, Matplotlib, tqdm. Note: the serial loop is intenti
 MonteCarlo_Pi_Research.py   # benchmark harness: 3 engines x 2 experiments + plotting
 fp.py                       # floor-plan domain: 29 vertices, Bezier curves, normalization
 results/                    # output charts (efficiency comparison + convergence)
-paper/                      # full research paper (PDF / DOCX, in Chinese)
+
 docs/                       # author's original working notes
 ```
 
@@ -62,7 +62,7 @@ docs/                       # author's original working notes
 
 ## Author
 
-**Miao Miao （缪妙）** — Nantong Qixiu Middle School, Jiangsu, China. Faculty adviser: Zhang Yu （张育）.
+**Larissa** — junior-high student, Jiangsu, China.
 Research period: March–June 2026.
 
 ---
@@ -73,4 +73,4 @@ Research period: March–June 2026.
 
 ## License
 
-MIT — see the repository's license note. Code and paper © Miao Miao.
+MIT — see the repository's license note. Code and paper © Larissa.
